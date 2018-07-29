@@ -2,19 +2,12 @@
   <section class="container">
     <div class="menu">
       <nuxt-link class="back" to="/">&larr; Back</nuxt-link>
-      <h2 class="menu__title">Dishes to pickle your fancy:</h2>
+      <h2 class="menu__title">Dishes that are sure to pickle your fancy:</h2>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
-  }
-}
 </script>
 
 <style lang="scss">

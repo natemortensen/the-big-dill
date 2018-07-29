@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'the-big-dill',
+    title: 'The Big Dill',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -34,6 +34,21 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: [
+    [
+      'nuxt-netlify-cms',
+      {
+        cmsConfig: {
+          backend: {
+            name: 'git-gateway',
+            branch: 'master',
+            publish_mode: 'editorial_workflow'
+          }
+        },
+        adminPath: 'admin'
+      }
+    ]
+  ]
 }
 
