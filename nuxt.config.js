@@ -1,14 +1,14 @@
-import glob from 'glob'
-import path from 'path'
+var glob = require('glob');
+var path = require('path');
 
 module.exports = {
   /*
   ** Headers of the page
   */
 
-  var dynamicRoutes = getDynamicPaths({
+  dynamicRoutes: getDynamicPaths({
     '/dishes': 'dishes/*.json'
-  });
+  }),
 
   head: {
     title: 'The Big Dill',
