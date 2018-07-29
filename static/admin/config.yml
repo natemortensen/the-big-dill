@@ -3,15 +3,16 @@ backend:
   branch: master
 publish_mode: editorial_workflow
 
-media_folder: "images/uploads"
-public_folder: "content"
+media_folder: "static/images/uploads"
 
 collections:
   - name: "dish"
     label: "Dish"
-    folder: "pages/dishes/"
+    folder: "content/dishes/"
     sort: "date:desc"
     create: true
+    format: 'json'
     fields:
-      - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "entry-title", required: true}
       - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}

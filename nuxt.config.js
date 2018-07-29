@@ -1,7 +1,15 @@
+import glob from 'glob'
+import path from 'path'
+
 module.exports = {
   /*
   ** Headers of the page
   */
+
+  var dynamicRoutes = getDynamicPaths({
+    '/dishes': 'dishes/*.json'
+  });
+
   head: {
     title: 'The Big Dill',
     meta: [
@@ -38,5 +46,20 @@ module.exports = {
   modules: [
     'nuxt-netlify-cms'
   ]
+}
+
+/**
+ * Create an array of URLs from a list of files
+ * @param {*} urlFilepathTable
+ */
+function getDynamicPaths(urlFilepathTable) {
+  return [].concat(
+    ...Object.keys(urlFilepathTable).map(url => {
+    var filepathGlob = urlFilepathTable[url];
+  return glob
+    .sync(filepathGlob, { cwd: 'content' })
+    .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
+})
+);
 }
 
