@@ -1,6 +1,8 @@
 <template>
   <div>
-    <nuxt/>
+    <section class="container">
+      <nuxt/>
+    </section>
   </div>
 </template>
 
@@ -48,6 +50,14 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>
 

@@ -1,18 +1,16 @@
 <template>
-  <section class="container">
-    <div>
-      <img src="~/assets/pickles.svg" class="logo">
-      <h1 class="title">
-        The Big Dill
-      </h1>
-      <h2 class="subtitle">
-        A Tasty, Punny JAMStack demo
-      </h2>
-      <div class="links">
-        <nuxt-link to="/menu" class="button--green">Peruse our Menu</nuxt-link>
-      </div>
+  <div>
+    <img src="~/assets/pickles.svg" class="logo">
+    <h1 class="title">
+      The Big Dill
+    </h1>
+    <h2 class="subtitle">
+      A Tasty, Punny JAMStack demo
+    </h2>
+    <div class="links">
+      <nuxt-link to="/menu" class="button--green">Peruse our Menu</nuxt-link>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -25,15 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+<style lang="scss" scoped>
 .logo {
   max-width: 40%;
 }
