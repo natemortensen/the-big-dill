@@ -36,19 +36,7 @@ module.exports = {
     }
   },
   modules: [
-    [
-      'nuxt-netlify-cms',
-      {
-        cmsConfig: {
-          backend: {
-            name: 'git-gateway',
-            branch: 'master',
-            publish_mode: 'editorial_workflow'
-          }
-        },
-        adminPath: 'admin'
-      }
-    ]
+    'nuxt-netlify-cms'
   ]
 }
 

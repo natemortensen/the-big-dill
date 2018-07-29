@@ -1,12 +1,17 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 publish_mode: editorial_workflow
+
 media_folder: "images/uploads"
+public_folder: "content"
+
 collections:
-  - name: dish
-    folder: "src/pages/dishes"
+  - name: "dish"
+    label: "Dish"
+    folder: "pages/dishes/"
+    sort: "date:desc"
     create: true
     fields:
-      - name: name
-
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
+      - {label: "Description", name: "description", widget: "markdown"}
